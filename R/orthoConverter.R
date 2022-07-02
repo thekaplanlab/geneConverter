@@ -5,7 +5,7 @@
 #' to human gene names. If the column contains a mix of these organisms and Human gene names,
 #' only gene synonyms will be converted to gene names and gene names will remain the same.
 #'
-#' @param genelist A dataframe object
+#' @param genelist A data frame object
 #' @param colname Name of the column containing gene synonyms to be converted to human gene names
 #' @param ctype The type of creature whose gene names will be changed
 #' @param drop If it is true, it will delete row or rows which there is no match between selected creature and human
