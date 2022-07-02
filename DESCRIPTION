@@ -2,8 +2,8 @@ Package: geneConverter
 Type: Package
 Title: A package for conversion of multiple gene identifier
 Version: 0.1.0
-Author: Hamdi Furkan Kepenek
-Maintainer: Hamdi Furkan Kepenek <h.furkankepenek@gmail.com>
+Author: Mustafa Samet Pir, Hamdi Furkan Kepenek
+Maintainer: Mustafa Samet Pir <mustafapir29@gmail.com>, Hamdi Furkan Kepenek <h.furkankepenek@gmail.com>
 Description: This package provides functions to convert gene synonyms to gene names and homologous gene
     names of several organism includes human.
 License: GPL-3
