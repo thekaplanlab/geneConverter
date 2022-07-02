@@ -8,7 +8,7 @@ C. cerevisiae gene names to human gene names.}
 orthoConverter(genelist, colname, ctype, drop = FALSE)
 }
 \arguments{
-\item{genelist}{A dataframe object}
+\item{genelist}{A data frame object}
 
 \item{colname}{Name of the column containing gene synonyms to be converted to human gene names}
 
