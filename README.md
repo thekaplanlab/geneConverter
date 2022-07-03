@@ -22,36 +22,41 @@ if(!require(geneConverter)){
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+Here is an example data frame including gene names in one column:
+
+| c.elegans_genes | asdf |
+|:----------------|:-----|
+| abt-2           | a    |
+| pgp-1           | b    |
+| wht-1           | c    |
+| furkan          | d    |
+
+`orthoConverter` function converts gene synonyms (if any) in the
+selected column to gene names. This makes it easier to transform gene
+synonyms to gene names even when the column contains a mixture of gene
+synonyms and gene names. This function can also be used to be sure all
+elements are gene names and there is no gene synonym in the table.
+Output is the same data table with all other columns preserved.
+
+## Usage
 
 ``` r
-library(geneConverter)
-## basic example code
+df<-orthoConverter(example, "c.elegans_genes", ctype = celeg)
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`?
-You can include R chunks like so:
-
-``` r
-summary(cars)
-#>      speed           dist       
-#>  Min.   : 4.0   Min.   :  2.00  
-#>  1st Qu.:12.0   1st Qu.: 26.00  
-#>  Median :15.0   Median : 36.00  
-#>  Mean   :15.4   Mean   : 42.98  
-#>  3rd Qu.:19.0   3rd Qu.: 56.00  
-#>  Max.   :25.0   Max.   :120.00
-```
-
-You’ll still need to render `README.Rmd` regularly, to keep `README.md`
-up-to-date. `devtools::build_readme()` is handy for this. You could also
-use GitHub Actions to re-render `README.Rmd` every time you push. An
-example workflow can be found here:
-<https://github.com/r-lib/actions/tree/v1/examples>.
-
-You can also embed plots, for example:
-
-<img src="man/figures/README-pressure-1.png" width="100%" />
-
-In that case, don’t forget to commit and push the resulting figure
-files, so they display on GitHub and CRAN.
+| c.elegans_genes | asdf |
+|:----------------|:-----|
+| ABCA1           | a    |
+| ABCA12          | a    |
+| ABCA13          | a    |
+| ABCA2           | a    |
+| ABCA4           | a    |
+| ABCA7           | a    |
+| furkan          | d    |
+| ABCB1           | b    |
+| ABCB11          | b    |
+| ABCB4           | b    |
+| ABCB5           | b    |
+| ABCG1           | c    |
+| ABCG2           | c    |
+| ABCG4           | c    |
