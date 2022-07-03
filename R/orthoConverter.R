@@ -8,9 +8,9 @@
 #' @param genelist A data frame object
 #' @param colname Name of the column containing gene synonyms to be converted to human gene names
 #' @param ctype The type of creature whose gene names will be changed
-#' @param drop If it is true, it will delete row or rows which there is no match between selected creature and human
+#' @param drop If it is TRUE, it will delete row or rows which there is no match between selected creature and human
 #'
-#' @return
+#' @return Data frame object
 #' @export
 #'
 
@@ -50,3 +50,5 @@ orthoConverter<-function(genelist, colname, ctype, drop = FALSE){
 
   return(genelist[,1:(length(genelist)-1), drop = FALSE])
 }
+
+

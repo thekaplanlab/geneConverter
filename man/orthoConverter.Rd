@@ -14,7 +14,10 @@ orthoConverter(genelist, colname, ctype, drop = FALSE)
 
 \item{ctype}{The type of creature whose gene names will be changed}
 
-\item{drop}{If it is true, it will delete row or rows which there is no match between selected creature and human}
+\item{drop}{If it is TRUE, it will delete row or rows which there is no match between selected creature and human}
+}
+\value{
+Data frame object
 }
 \description{
 This function converts a column containing gene names of given organisms within a data frame

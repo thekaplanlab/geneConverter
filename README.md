@@ -15,7 +15,9 @@ includes human.
 You can install the development version of geneConverter like so:
 
 ``` r
-# FILL THIS IN! HOW CAN PEOPLE INSTALL YOUR DEV PACKAGE?
+if(!require(geneConverter)){
+  library(devtools)
+  install_github("FurkanKepenek/geneConverter")
 ```
 
 ## Example
