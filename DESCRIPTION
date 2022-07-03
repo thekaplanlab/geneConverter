@@ -14,3 +14,5 @@ URL: https://github.com/FurkanKepenek/geneConverter
 BugReports: https://github.com/FurkanKepenek/geneConverter/issues
 Depends: 
     R (>= 2.10)
+Imports:
+    fastmatch

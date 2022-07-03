@@ -49,3 +49,5 @@ ncbiConverter<-function(genelist, colname, drop = FALSE){
 
   return(genelist[,1:(length(genelist)-1), drop = FALSE])
 }
+
+
