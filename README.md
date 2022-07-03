@@ -37,8 +37,10 @@ synonyms to gene names even when the column contains a mixture of gene
 synonyms and gene names. This function can also be used to be sure all
 elements are gene names and there is no gene synonym in the table.
 Output is the same data table with all other columns preserved. If given
-data completely consisist of Ensembld ID’s, please choose Ensembl
-version of that organism while using `ctype` argument.
+data completely consisist of Ensembl ID’s, please choose Ensembl version
+of that organism while using `ctype` argument. If you want there is a
+table which explains the abbreviation and creatures for `ctype`
+argument. You can examine it with `View(cre_table)`.
 
 ## Usage `orthoConverter`
 
