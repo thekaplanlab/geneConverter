@@ -31,7 +31,7 @@ if(!require(geneConverter)){
   install_github("FurkanKepenek/geneConverter")
 ```
 
-## Example
+## Example `orthoConverter`
 
 Here is an example data frame including gene names in one column:
 
@@ -48,10 +48,11 @@ knitr::kable(example, "simple")
 
 
 `orthoConverter` function converts gene synonyms (if any) in the selected column to gene names. This makes it easier to transform gene synonyms to gene names even when the column contains a mixture of gene synonyms and gene names. This function can also be used to be sure all elements are gene names and there is no gene synonym in the table.
-Output is the same data table with all other columns preserved.
+Output is the same data table with all other columns preserved. If given data completely consisist of Ensembld ID's, please choose Ensembl version of that organism while using `ctype` argument.
 
 
-## Usage
+
+## Usage `orthoConverter`
 
 ```{r, results='hide', message=FALSE}
 df<-orthoConverter(example, "c.elegans_genes", ctype = celeg)
@@ -60,3 +61,16 @@ df<-orthoConverter(example, "c.elegans_genes", ctype = celeg)
 ```{r, highlight=FALSE, echo=FALSE}
 knitr::kable(df, "simple")
 ```
+
+
+If `drop = TRUE` argument used, result will be like this: 
+
+```{r, results='hide', message=FALSE}
+df<-orthoConverter(example, "c.elegans_genes", ctype = celeg, drop = TRUE)
+```
+
+```{r, highlight=FALSE, echo=FALSE}
+knitr::kable(df, "simple")
+```
+
+

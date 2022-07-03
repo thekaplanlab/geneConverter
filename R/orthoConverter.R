@@ -1,5 +1,5 @@
 #' Convert C. elegans, D. melanogaster, M. musculus, R. norvegicus, D. rerio and,
-#' C. cerevisiae gene names to human gene names.
+#' S. cerevisiae gene names to human gene names.
 #'
 #' This function converts a column containing gene names of given organisms within a data frame
 #' to human gene names. If the column contains a mix of these organisms and Human gene names,
@@ -51,4 +51,6 @@ orthoConverter<-function(genelist, colname, ctype, drop = FALSE){
   return(genelist[,1:(length(genelist)-1), drop = FALSE])
 }
 
+
+example <- read.csv("example.csv")
 

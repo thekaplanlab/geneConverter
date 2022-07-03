@@ -20,7 +20,7 @@ if(!require(geneConverter)){
   install_github("FurkanKepenek/geneConverter")
 ```
 
-## Example
+## Example `orthoConverter`
 
 Here is an example data frame including gene names in one column:
 
@@ -36,9 +36,11 @@ selected column to gene names. This makes it easier to transform gene
 synonyms to gene names even when the column contains a mixture of gene
 synonyms and gene names. This function can also be used to be sure all
 elements are gene names and there is no gene synonym in the table.
-Output is the same data table with all other columns preserved.
+Output is the same data table with all other columns preserved. If given
+data completely consisist of Ensembld ID’s, please choose Ensembl
+version of that organism while using `ctype` argument.
 
-## Usage
+## Usage `orthoConverter`
 
 ``` r
 df<-orthoConverter(example, "c.elegans_genes", ctype = celeg)
@@ -60,3 +62,25 @@ df<-orthoConverter(example, "c.elegans_genes", ctype = celeg)
 | ABCG1           | c    |
 | ABCG2           | c    |
 | ABCG4           | c    |
+
+If `drop = TRUE` argument used, result will be like this:
+
+``` r
+df<-orthoConverter(example, "c.elegans_genes", ctype = celeg, drop = TRUE)
+```
+
+|     | c.elegans_genes | asdf |
+|-----|:----------------|:-----|
+| 1   | ABCA1           | a    |
+| 2   | ABCA12          | a    |
+| 3   | ABCA13          | a    |
+| 4   | ABCA2           | a    |
+| 5   | ABCA4           | a    |
+| 6   | ABCA7           | a    |
+| 8   | ABCB1           | b    |
+| 9   | ABCB11          | b    |
+| 10  | ABCB4           | b    |
+| 11  | ABCB5           | b    |
+| 12  | ABCG1           | c    |
+| 13  | ABCG2           | c    |
+| 14  | ABCG4           | c    |
