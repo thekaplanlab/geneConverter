@@ -14,10 +14,7 @@
 
 
 ncbiConverter<-function(genelist, colname, drop = FALSE){
-  `%fin%` <- function(x, table) {
-    stopifnot(require(fastmatch))
-    fmatch(x, table, nomatch = 0L) > 0L
-  }
+
   genelist_old  <- genelist
   names(human_ncbi)[1]<-"Gene_name_temp"
   n_occur <- data.frame(table(human_ncbi$Gene_synonyms))

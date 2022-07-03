@@ -14,10 +14,6 @@
 
 
 synoMouse<-function(genelist, colname, drop = FALSE){
-  `%fin%` <- function(x, table) {
-    stopifnot(require(fastmatch))
-    fmatch(x, table, nomatch = 0L) > 0L
-  }
 
   genelist_old  <- genelist
   names(mouse_synonyms)[1]<-"Gene_name_temp"
