@@ -6,9 +6,9 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of geneConverter package is to provide an easy R function to convert gene
-synonyms to gene names and orthologous gene names to human gene counterparts. 
-
+The goal of geneConverter is to provides functions to convert gene
+synonyms to gene names and homologous gene names of several organism
+includes human.
 
 ## Installation
 
@@ -40,7 +40,7 @@ Output is the same data table with all other columns preserved. If given
 data completely consisist of Ensembl ID’s, please choose Ensembl version
 of that organism while using `ctype` argument. If you want there is a
 table which explains the abbreviation and creatures for `ctype`
-argument. You can examine it with `View(cre_table)`.
+argument. You can examine it with `View(cre_table)`
 
 ## Usage `orthoConverter`
 
