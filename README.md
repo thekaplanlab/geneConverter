@@ -6,9 +6,9 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of geneConverter is to provides functions to convert gene
-synonyms to gene names and homologous gene names of several organism
-includes human.
+The goal of geneConverter package is to provide an easy R function to convert gene
+synonyms to gene names and orthologous gene names to human gene counterparts. 
+
 
 ## Installation
 
