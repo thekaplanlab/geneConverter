@@ -17,7 +17,7 @@ You can install the development version of geneConverter like so:
 ``` r
 #install.packages("devtools)
 library(devtools)
-install_github("FurkanKepenek/geneConverter")
+install_github("thekaplanlab/geneConverter")
 ```
 
 ## Example `orthoConverter`
