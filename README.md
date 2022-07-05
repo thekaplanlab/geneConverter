@@ -40,7 +40,7 @@ Output is the same data table with all other columns preserved. If given
 data completely consisist of Ensembl ID’s, please choose Ensembl version
 of that organism while using `ctype` argument. If you want there is a
 table which explains the abbreviation and creatures for `ctype`
-argument. You can examine it with `View(cre_table)`
+argument. You can examine it with `View(cre_table)`. V1
 
 ## Usage `orthoConverter`
 
