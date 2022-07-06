@@ -3,7 +3,7 @@
 \name{orthoConverter}
 \alias{orthoConverter}
 \title{Convert C. elegans, D. melanogaster, M. musculus, R. norvegicus, D. rerio and,
-C. cerevisiae gene names to human gene names.}
+S. cerevisiae gene names to human gene names.}
 \usage{
 orthoConverter(genelist, colname, ctype, drop = FALSE)
 }
