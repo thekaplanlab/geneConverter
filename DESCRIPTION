@@ -1,7 +1,7 @@
 Package: geneConverter
 Type: Package
 Title: A package for conversion of multiple gene identifier
-Version: 0.1.0
+Version: 0.1.1
 Author: Mustafa Samet Pir, Hamdi Furkan Kepenek
 Maintainer: Mustafa Samet Pir <mustafapir29@gmail.com>, Hamdi Furkan Kepenek <h.furkankepenek@gmail.com>
 Description: This package provides functions to convert gene synonyms to gene names and homologous gene
@@ -10,9 +10,10 @@ License: GPL-3
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.2.0
-URL: https://github.com/FurkanKepenek/geneConverter
-BugReports: https://github.com/FurkanKepenek/geneConverter/issues
+URL: https://github.com/thekaplanlab/geneConverter
+BugReports: https://github.com/thekaplanlab/geneConverter/issues
 Depends: 
     R (>= 2.10)
 Imports:
+    dplyr,
     fastmatch
