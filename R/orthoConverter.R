@@ -49,5 +49,4 @@ orthoConverter<-function(genelist, colname, ctype, drop = FALSE){
 }
 
 
-example <- read.csv("example.csv")
 

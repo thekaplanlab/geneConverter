@@ -29,7 +29,6 @@ hgncConverter<-function(genelist, colname, drop = FALSE){
       genelist[[colname]][i]<-genelist$Gene_name_temp[i]
     }
   }
-
   pb = txtProgressBar(min = 0, max =length(genelist[[colname]]) , initial = 0)
   for (i in 1:length(genelist[[colname]])){
     if (!(genelist[[colname]][i] %fin% human_hgnc$Gene_name_temp) && length(human_hgnc$Gene_name_temp[which(human_hgnc$Gene_synonyms %fin% genelist[[colname]][i])]) == 1){
