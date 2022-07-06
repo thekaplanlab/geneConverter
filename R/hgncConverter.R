@@ -11,7 +11,7 @@
 #' @return data frame object
 #' @export
 #'
-#' @examples
+
 hgncConverter<-function(genelist, colname, drop = FALSE){
 
   genelist_old  <- genelist
