@@ -8,7 +8,6 @@
 #' @param colname Name of the column containing gene synonyms to be converted to gene names
 #' @return dataframe object
 #' @export
-#' @import dplyr
 #'
 hgncConverter2<-function(genelist, colname){
 
