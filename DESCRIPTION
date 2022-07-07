@@ -15,4 +15,5 @@ BugReports: https://github.com/thekaplanlab/geneConverter/issues
 Depends: 
     R (>= 2.10)
 Imports:
+    dplyr,
     fastmatch
