@@ -1,0 +1,178 @@
+---
+title: "Introduction to geneConverter Package"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Introduction to geneConverter Package}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  echo = TRUE,
+  library(geneConverter),
+  library(data.table),
+  library(kableExtra)
+)
+```
+
+# geneConverter
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of geneConverter is to provides functions to convert gene synonyms to gene names and homologous gene 
+names of several organism includes human.
+
+## Installation
+
+You can install the development version of geneConverter like so:
+
+``` r
+#install.packages("devtools)
+library(devtools)
+install_github("thekaplanlab/geneConverter")
+```
+
+## Example `orthoConverter`
+
+Here is an example data frame including gene names in one column:
+
+```{r, echo=FALSE}
+example<-read.csv("ortho.csv")
+example<-example[,-1]
+```
+
+
+```{r, echo=FALSE}
+knitr::kable(example, "simple")
+```
+
+
+
+`orthoConverter` function converts gene synonyms (if any) in the selected column to gene names. This makes it easier to transform gene synonyms to gene names even when the column contains a mixture of gene synonyms and gene names. This function can also be used to be sure all elements are gene names and there is no gene synonym in the table.
+Output is the same data table with all other columns preserved. If given data completely consisist of Ensembl ID's, please choose Ensembl version of that organism while using `ctype` argument. If you want there is a table which explains the abbreviation and creatures for `ctype` argument. You can examine it with `View(cre_table)`.
+
+
+## Usage `orthoConverter`
+
+```{r, results='hide', message=FALSE}
+df<-orthoConverter(example, "C.elegans_genes", ctype = celeg)
+```
+
+```{r, highlight=FALSE, echo=FALSE}
+knitr::kable(df, "simple")
+```
+
+
+If `drop = TRUE` argument used, result will be like this: 
+
+```{r, results='hide', message=FALSE}
+df<-orthoConverter(example, "C.elegans_genes", ctype = celeg, drop = TRUE)
+```
+
+```{r, highlight=FALSE, echo=FALSE}
+knitr::kable(df, "simple")
+```
+
+
+## Example `synoMouse`
+
+Here is an example data frame including synonyms of mouse gene names in one column:
+
+```{r, echo=FALSE}
+example<-read.csv("synom.csv")
+example<-example[,-1]
+```
+
+
+```{r, echo=FALSE}
+knitr::kable(example, "simple")
+```
+
+`synoMouse` function converts a column containing mouse gene synonyms within a data frame to mouse NCBI gene names. If the column contains a mix of mouse gene names and mouse gene synonyms, only mouse gene synonyms will be converted to mouse gene names and mouse gene names will remain the same. `drop` argument is available for this function, there is no `ctype` argument because you don't need to select type of organism. 
+
+
+## Usage `synoMouse`
+
+```{r, results='hide', message=FALSE}
+df<-synoMouse(example, "M.musculus")
+```
+
+```{r, highlight=FALSE, echo=FALSE}
+knitr::kable(df, "simple")
+```
+
+
+## Example `hgncConverter`
+
+
+Here is an example data frame including non-HGNC human gene names in one column:
+
+```{r, echo=FALSE}
+example<-read.csv("hgnc_d.csv")
+example<-example[,-1]
+```
+
+
+```{r, echo=FALSE}
+knitr::kable(example, "simple")
+```
+
+
+`hgncConverter` function converts a column containing human gene synonyms within a data frame
+to HGNC approved gene names. If the column contains a mix of gene names and gene synonyms,
+only gene synonyms will be converted to gene names and gene names will remain the same. 
+`drop` argument is available for this function, there is no `ctype` argument because you don't need to select type of organism.
+
+## Usage `hgncConverter`
+
+```{r, results='hide', message=FALSE}
+df<-hgncConverter(example, "H.sapiens_synonym")
+```
+
+```{r, highlight=FALSE, echo=FALSE}
+knitr::kable(df, "simple")
+```
+
+
+## Example `ncbiConverter`
+
+
+Here is an example data frame including non-NCBI human gene names in one column:
+
+
+```{r, echo=FALSE}
+example<-read.csv("ncbi_d.csv")
+example<-example[,-1]
+```
+
+
+```{r, echo=FALSE}
+knitr::kable(example, "simple")
+```
+
+
+`ncbiConverter` function converts a column containing human gene synonyms within a data frame
+to NCBI gene names. If the column contains a mix of gene names and gene synonyms,
+only gene synonyms will be converted to gene names and gene names will remain the same.
+`drop` argument is available for this function, there is no `ctype` argument because you don't need to select type of organism.
+
+## Usage `ncbiConverter`
+
+
+```{r, results='hide', message=FALSE}
+df<-ncbiConverter(example, "H.sapiens_synonym")
+```
+
+```{r, highlight=FALSE, echo=FALSE}
+knitr::kable(df, "simple")
+```
+
