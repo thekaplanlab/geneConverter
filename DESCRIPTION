@@ -1,7 +1,7 @@
 Package: geneConverter
 Type: Package
 Title: A package for conversion of multiple gene identifier
-Version: 0.1.1
+Version: 0.1.2
 Author: Mustafa Samet Pir, Hamdi Furkan Kepenek
 Maintainer: Mustafa Samet Pir <mustafapir29@gmail.com>, Hamdi Furkan Kepenek <h.furkankepenek@gmail.com>
 Description: This package provides functions to convert gene synonyms to gene names and homologous gene
@@ -17,3 +17,6 @@ Depends:
 Imports:
     dplyr,
     fastmatch
+Suggests: 
+    knitr
+VignetteBuilder: knitr

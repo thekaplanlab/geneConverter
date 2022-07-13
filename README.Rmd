@@ -36,7 +36,7 @@ install_github("thekaplanlab/geneConverter")
 Here is an example data frame including gene names in one column:
 
 ```{r, echo=FALSE}
-example<-read.csv("example.csv")
+example<-read.csv("ortho.csv")
 example<-example[,-1]
 ```
 
@@ -54,7 +54,7 @@ Output is the same data table with all other columns preserved. If given data co
 ## Usage `orthoConverter`
 
 ```{r, results='hide', message=FALSE}
-df<-orthoConverter(example, "c.elegans_genes", ctype = celeg)
+df<-orthoConverter(example, "C.elegans_genes", ctype = celeg)
 ```
 
 ```{r, highlight=FALSE, echo=FALSE}
@@ -65,7 +65,7 @@ knitr::kable(df, "simple")
 If `drop = TRUE` argument used, result will be like this: 
 
 ```{r, results='hide', message=FALSE}
-df<-orthoConverter(example, "c.elegans_genes", ctype = celeg, drop = TRUE)
+df<-orthoConverter(example, "C.elegans_genes", ctype = celeg, drop = TRUE)
 ```
 
 ```{r, highlight=FALSE, echo=FALSE}
