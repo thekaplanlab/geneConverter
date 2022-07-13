@@ -42,6 +42,7 @@ orthoConverter<-function(genelist, colname, ctype, drop = FALSE){
   if (drop == TRUE) {
     index <- genelist[[colname]] %in% genelist_old[[colname]]
     genelist <- genelist[!index,]
+    colnames(genelist)[which(names(genelist) == colname)] <- "human_versions"
   }
 
 
