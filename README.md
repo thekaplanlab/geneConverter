@@ -24,12 +24,12 @@ install_github("thekaplanlab/geneConverter")
 
 Here is an example data frame including gene names in one column:
 
-| C.elegans_genes | Ensembl_ID     |
-|:----------------|:---------------|
-| aat-1           | WBGene00000003 |
-| bicd-1          | WBGene00016611 |
-| gtl-2           | WBGene00001795 |
-| CG12320         | FBgn0038590    |
+| gene_names | Ensembl_ID     |
+|:-----------|:---------------|
+| aat-1      | WBGene00000003 |
+| bicd-1     | WBGene00016611 |
+| gtl-2      | WBGene00001795 |
+| CG12320    | FBgn0038590    |
 
 `orthoConverter` function converts gene synonyms (if any) in the
 selected column to gene names. This makes it easier to transform gene
@@ -45,10 +45,10 @@ argument. You can examine it with `View(cre_table)`.
 ## Usage `orthoConverter`
 
 ``` r
-df<-orthoConverter(example, "C.elegans_genes", ctype = celeg)
+df<-orthoConverter(example, "gene_names", ctype = celeg)
 ```
 
-| C.elegans_genes | Ensembl_ID     |
+| converted_genes | Ensembl_ID     |
 |:----------------|:---------------|
 | SLC7A6          | WBGene00000003 |
 | SLC7A7          | WBGene00000003 |
@@ -65,18 +65,18 @@ df<-orthoConverter(example, "C.elegans_genes", ctype = celeg)
 If `drop = TRUE` argument used, result will be like this:
 
 ``` r
-df<-orthoConverter(example, "C.elegans_genes", ctype = celeg, drop = TRUE)
+df<-orthoConverter(example, "gene_names", ctype = celeg, drop = TRUE)
 ```
 
-|     | human_versions | Ensembl_ID     |
-|-----|:---------------|:---------------|
-| 1   | SLC7A6         | WBGene00000003 |
-| 2   | SLC7A7         | WBGene00000003 |
-| 3   | SLC7A10        | WBGene00000003 |
-| 4   | SLC7A5         | WBGene00000003 |
-| 5   | SLC7A8         | WBGene00000003 |
-| 6   | BICD1          | WBGene00016611 |
-| 7   | BICD2          | WBGene00016611 |
-| 9   | TRPM1          | WBGene00001795 |
-| 10  | TRPM3          | WBGene00001795 |
-| 11  | TRPM7          | WBGene00001795 |
+|     | converted_genes | Ensembl_ID     |
+|-----|:----------------|:---------------|
+| 1   | SLC7A6          | WBGene00000003 |
+| 2   | SLC7A7          | WBGene00000003 |
+| 3   | SLC7A10         | WBGene00000003 |
+| 4   | SLC7A5          | WBGene00000003 |
+| 5   | SLC7A8          | WBGene00000003 |
+| 6   | BICD1           | WBGene00016611 |
+| 7   | BICD2           | WBGene00016611 |
+| 9   | TRPM1           | WBGene00001795 |
+| 10  | TRPM3           | WBGene00001795 |
+| 11  | TRPM7           | WBGene00001795 |
